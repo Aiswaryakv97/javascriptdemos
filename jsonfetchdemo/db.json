@@ -1,0 +1,8 @@
+{
+
+    "employee" : [
+        {"empcode":1001,"name":"John","Domain":"Java"},
+        {"empcode":1002,"name":"Seth","Domain":".Net"},
+        {"empcode":1003,"name":"Claire","Domain":"Python"}
+]
+}

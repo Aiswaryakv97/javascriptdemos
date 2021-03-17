@@ -1,0 +1,153 @@
+
+
+JavaScript
+===============
+JavaScript is a scripting language that enables you to create dynamically
+ updating content, control multimedia, animate images, and pretty much everything else.
+JS is a strong language for incorporating logic, functionality and events in out
+static web pages.
+
+JavaScript will have support for all basic logic designs just like any other programming
+logic.
+
+However JS is interpreted in browser. For eg. In Chrome browser, the in-built Engine-V8,
+interprets JS and returns the output.
+
+We must remember one important thing, ie, JavaScript is NOT TYPE SAFE.
+
+Any variable/ Instance/ Reference declared in JS, can be used to store any type primitive
+data.
+
+Tools....
+============
+Visual Studio Code--> IDE
+Node.JS--> Execution environment that mimics Engine-V8
+Live Server --> Provide internal browser connect.
+
+
+JavaScript Ecma Script 6 (ES6)
+--------------------------------
+1. Variable, var, functions
+2. Function Call, Token arrow
+3. Decision logic, operators using arrow function.
+4. Class concept
+6. Arrays and loops
+7. Pre-defined Array function
+8. DOM manipulation
+9. JS Set, Map
+10. JSON--> JavaScript Object Notation.
+11. Async calls in JS--> AJAX, callback, Await, fetch, promise
+12. Mocha-chai unit testing.
+
+
+
+Lambda
+===========
+
+Token Arrow
+
+function () ->
+{
+
+}
+
+Topics
+===========
+1. JDK, JRE, JVM
+2. Polymorphism
+	a)Give one example of static polymorphism used in core java Language.
+		Thread.Sleep();Sysout...
+	b)Can we have same method name and same signature, but with diff return type
+	 and still call Static Polymorphism? --NO
+3. Inheritance
+	a)What is the purpose of have inheritance? Code Reusability,easy maintenance of code,
+		help us to define a basic structural design for the program.
+	b)Abstraction works in inheritance?
+	c)What is @Override?
+	d) What is interface?
+	e)Can one interface inherit from another interface?
+4. FileIO
+	a)What is Buffer memory in Java IO?
+5. Abstraction and Encapsulation
+	a)what is Abstraction?
+	b)What is encapsulation?  -> Private access specifier
+6. DAO pattern, Singleton Pattern -(Autowiring)
+7. Threads-> Async, Synchronization
+8. Annotations
+9.Exception Handling
+====
+package com.USTG;
+
+
+//Functional interface will have only 1 abstract method
+
+	
+
+//Functional Interface
+
+@FunctionalInterface//imp annotation
+interface Logo// car, bike, airplane...automobile... concept car
+{
+	public void logoImage();// company logo
+	//public void logoPic(); incorrect
+}
+
+class newCar 
+{
+	public static Object call()
+	{
+	Logo obj=() ->//lambda expression is referring to functional method
+	//lambda expression is used only for Functional Interface
+ {
+	System.out.println("This is another method implementing Logo Functional interface");
+ };
+ obj.logoImage();
+  return obj;
+	}
+
+	
+}
+
+public class FunctionalInterfaceDemo 
+{
+	
+
+	public static void main(String[] args) {
+		String imageName="VolswagenLogo";
+		Logo objlogo=()->
+		{
+			System.out.println(imageName);
+		};
+		
+		objlogo.logoImage();//this was for FunctionalInterfaceDemo class
+		
+		Logo logoObj = newCar :: call;
+		logoObj.logoImage();//this was for newCar class 
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

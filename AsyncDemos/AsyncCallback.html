@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+      <h2>Javascript Callback</h2>
+      <p id="demo"></p>
+<script>
+ function myCall(res)
+ {
+     document.getElementById("demo").innerHTML = res;
+ }
+
+function myAdd(num1, num2, myCallback)
+{
+    let sum = num1+num2;
+
+    myCallback(sum);
+}
+
+let result = myAdd(3,4, myCall);
+</script>
+
+    </body>
+</html>

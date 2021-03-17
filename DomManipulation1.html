@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <body>
+        <h2>DOM Manipulation</h2>
+        <div id="main">
+            <p>This is the parent DIV element</p>
+        
+            <p>We will use<b>getElementBy() methods</b> in this demo.</p>
+
+
+            <div id="colorText">
+                <p id="p1"></p>
+                <p id="p2"></p>
+                <button id = "btn" name ="btn1" aria-atomic="click me" >
+                    Please hit me to generate message
+                </button>
+            </div>
+        </div>
+
+        <script>
+var x = document.getElementById("main");
+var y = x.getElementsByTagName("p");
+document.getElementById("p1").innerHTML = 'This is DOM session '+ y[0].innerHTML;
+document.querySelector('#p2').innerHTML = 'This is Query Selector method...';
+var divs = document.querySelectorAll('div');
+
+for(var c of divs)
+{
+    c.style.color='red';
+}
+
+var btn = document.querySelector('button');
+btn.addEventListener('click',msgPop);
+
+function msgPop()
+{
+    alert('Dom manipulation successful!');
+}
+</script>
+
+    </body>
+</html>

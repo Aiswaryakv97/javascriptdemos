@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <style>
+        table,td{
+            border: 2px solid green;
+        }
+        </style>
+
+  </head>
+
+<body>
+     <h2> Dom Manipulation</h2>
+     <div>
+        <input type="button" value="Create the table row elements." onclick="createTableRow()">
+
+     </div>
+
+
+     <script>
+         function createTableRow()
+         {
+             var body = document.getElementsByTagName("body")[0];
+             var tbl = document.createElement("table");
+             var tblbody = document.createElement('tbody');
+             for(var i=0; i<2;i++)
+             {
+                 var row = document.createElement("tr");
+                 for(var j=0; j<2;j++)
+             {
+                 var cell = document.createElement("td");
+                 var cellText = document.createTextNode("Cell in tr "+i+" cols "+j);
+
+                 cell.appendChild(cellText);
+                 row.appendChild(cell);
+                 
+             }
+             tblbody.appendChild(row);
+            }             
+             tbl.appendChild(tblbody);
+             body.appendChild(tbl);
+             
+         }
+
+
+    </script>
+     </body>
+
+</html>

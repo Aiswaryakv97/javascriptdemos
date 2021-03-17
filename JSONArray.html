@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2> JSON Array Demo</h2>
+
+  <p id="demo"></p>
+  <script>
+
+ var Employee = [
+                {"empcode":1001,"name":"John","Domain":"Java"},
+                {"empcode":1002,"name":"Seth","Domain":".Net"},
+                {"empcode":1003,"name":"Claire","Domain":"Python"},
+ ];
+
+
+   function myArr(arr1)
+   {
+
+    var display ="";
+    var i=0;
+    for(;i<arr1.length; i++)
+    {
+        display =  display+arr1[i].name+"--"+arr1[i].Domain+"--"+arr1[i].empcode+"||";
+        document.getElementById("demo").innerHTML = display;
+    }
+   }
+   myArr(Employee);
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+ <head>
+     <title>JSON Fetch API Demo</title>
+ </head>
+<body>
+       <div id ="myData"></div>
+       <script>
+           //'http://reqres.in/api/users/4'--> must resolve CORS first to use public APIs
+           fetch('http://localhost:3000/employee').then(function(response)
+           {
+               return response.json();
+           }).then(function(data)
+           {
+               appendData(data);
+           }).catch(function(err)
+           {
+               console.log('error: '+err);
+           });
+
+
+           function appendData(data)
+           {
+               var mainContainer = document.getElementById("myData");
+               for(i=0;i<data.length; i++)
+               {
+                   div = document.createElement("div");// DOM manipulation
+                   div.innerHTML = 'Name: '+data[i].name+' Domain:'+ data[i].Domain;
+                   mainContainer.appendChild(div);
+               }
+           }
+
+       </script>
+    </body>
+
+</html>

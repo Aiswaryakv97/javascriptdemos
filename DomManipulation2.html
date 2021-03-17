@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <style>
+        table,td{
+            border: 2px solid green;
+        }
+        </style>
+
+  </head>
+
+<body>
+     <h2> Dom Manipulation</h2>
+     <table id="course" align="center">
+        <tr>
+            <td>Jenkins</td>
+            <td>1 week course</td>
+        </tr>
+
+        <tr>
+            <td>CI pipeline</td>
+            <td>1 day course</td>
+        </tr>
+
+     </table>
+     <hr>
+     <br><br>
+     <button onclick="delRow()">Delete Row</button>
+</body>
+<script>
+
+
+function delRow()
+{
+    document.getElementById("course").deleteRow(0);
+}
+
+</script>
+</html>

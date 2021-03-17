@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2> JSON Stringify Demo</h2>
+
+  <p id="demo"></p>
+  <script>
+
+ var Employee = [
+                {"empcode":1001,"name":"John","Domain":"Java"},
+                {"empcode":1002,"name":"Seth","Domain":".Net"},
+                {"empcode":1003,"name":"Claire","Domain":"Python"},
+ ];
+
+
+  var stringObj = JSON.stringify(Employee);
+  document.getElementById("demo").innerHTML = stringObj;
+
+  </script>
+
+</body>
+
+</html>

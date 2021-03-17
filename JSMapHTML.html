@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <body>
+            <p id="demo"></p>
+
+            <script>
+
+let locations = new Map([['01','Delhi'],['02','Mumbai'],['03','Bengaluru']]);
+
+
+
+var itr = locations.values();
+
+for(i=0; i<locations.size; i++)
+{
+    document.write(itr.next().value);
+}
+
+            </script>
+
+    </body>
+</html>

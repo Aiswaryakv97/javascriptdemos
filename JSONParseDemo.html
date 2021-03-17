@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2> JSON Parse Demo</h2>
+
+  <p id="demo"></p>
+  <script>
+
+ var emp =  '{"empcode":1001,"name":"John","Domain":"Java"}';
+               
+   var parseObj = JSON.parse(emp);
+  document.getElementById("demo").innerHTML = parseObj.name+"--"+parseObj.empcode+"--"+parseObj.Domain+"||";
+
+  </script>
+
+</body>
+
+</html>
